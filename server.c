@@ -19,7 +19,6 @@ void roll_dice(int qty, int thr, int* cnt_s, int* cnt_six, int* cnt_one)
 
 outputData* roll_1_svc(inputData* argp, struct svc_req* rqstp)
 {
-  printf("received call\n");
   static outputData result;
 
   int cnt_success = 0;
@@ -42,5 +41,5 @@ outputData* roll_1_svc(inputData* argp, struct svc_req* rqstp)
   result.six = cnt_six;
   result.one = cnt_one;
 
-	return &result;
+  return &result;
 }

@@ -35,7 +35,7 @@ static void rpcdice_1(struct svc_req* rqstp, register SVCXPRT* transp)
 
 		if(uid != 0)
 		{
-            		svcerr_systemerr(transp);
+            		svcerr_auth(transp, AUTH_BADCRED);
 			return;
 	        }
 	}
