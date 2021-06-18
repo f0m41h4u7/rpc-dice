@@ -1,5 +1,4 @@
 #include "RPCDICE.h"
-#include <assert.h>
 
 void roll_dice(int qty, int thr, int* cnt_s, int* cnt_six, int* cnt_one)
 {
@@ -20,7 +19,8 @@ void roll_dice(int qty, int thr, int* cnt_s, int* cnt_six, int* cnt_one)
 
 outputData* roll_1_svc(inputData* argp, struct svc_req* rqstp)
 {
-	static outputData result;
+  printf("received call\n");
+  static outputData result;
 
   int cnt_success = 0;
   int cnt_six = 0;
