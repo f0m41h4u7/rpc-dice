@@ -6,9 +6,6 @@ void rpcdice_1(char* host, inputData* input)
 	CLIENT* clnt;
 	outputData* result;
 	
-	char service_name[] = "root@41.101.212.61";
-	char mech[] = "gssproxy_v1";
-
 	clnt = clnt_create(host, RPCDICE, RPCDICE_VERS, "udp");
 	if(clnt == NULL)
 	{
